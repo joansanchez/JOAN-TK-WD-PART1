@@ -1,0 +1,188 @@
+@import './variables';
+
+@mixin setUpContainer($backgroundCol) {
+    background: $backgroundCol;
+}
+
+
+@font-face {
+    font-family: "CustomGraphik";
+    src: 
+         url('./fonts/Graphik-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/Graphik-300.woff') format('woff'), /* Pretty Modern Browsers */
+         url('./fonts/Graphik-300.ttf')  format('truetype'), /* Safari, Android, iOS */
+         
+    
+}
+
+body{
+    font-family: CustomGraphik;
+}
+#main{
+    background: $backgroundColor;
+    max-width: 1440px;
+    margin: auto;
+}
+
+header{
+    @include setUpContainer($backgroundHeader);
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.generalInfo{
+    @include setUpContainer($backgroundHeader);
+    
+}
+
+.logo{
+    width: 180.83px;
+    height: 40px;
+}
+
+
+.listBenefits{
+    padding: 120px 90px 88px 102px;
+    .soPerky{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 54px;
+        line-height: 70px;
+        letter-spacing: 0.35px;
+
+        color: #003097;
+    }
+    .peopleWalking{
+        width: 606px;
+        height: 460px;
+        
+    }
+    .benefits-div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media all and (max-width: 640px) {
+
+    }
+}
+
+.testimonials{
+    @include setUpContainer($backgroundTestimonials);
+    padding: 103px 94px 117px 92px;
+    .testimonials-div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .testimonials-her{  
+        max-width: 526px;
+        max-height: 526px;
+    }
+    
+    .testimonials-him{  
+        max-width: 517px;
+        max-height: 517px;
+    }
+    .leftCol{
+        max-width: 526px;
+        order: 1;
+    }
+    .rightCol{
+        margin-top: 15px;
+        max-width: 517px;
+        order: 2;
+    }
+    .text-testimonials-big{
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.3px;
+        color: #FFFFFF;
+    }
+    .text-name-testimonials{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+        color: #FFFFFF;
+    }
+    .text-position-testimonials{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FFFFFF;
+    }
+    @media all and (max-width: 640px) {
+        padding: 51px 32px 62px 32px;
+        .testimonials-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .testimonials-her{  
+            max-width: 296px;
+            max-height: 296px;
+        }
+        
+        .testimonials-him{  
+            max-width: 296px;
+            max-height: 296px;
+        }
+    
+        .leftCol{
+            max-width: 526px;
+            order: 1;
+        }
+        .rightCol{
+            max-width: 517px;
+            order: 2;
+        }
+        .text-testimonials-big{
+            font-weight: normal;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;
+        }
+        .text-name-testimonials{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;
+        }
+        .text-position-testimonials{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+
+
+
+
+.customers{
+    
+}
+
+.lastPic{
+    @include setUpContainer($backgroundLastPic);
+   
+}
+
+#footerIndex{
+    
+}
