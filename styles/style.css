@@ -28,6 +28,27 @@ header {
   height: 40px;
 }
 
+.listBene {
+  list-style: none;
+  counter-reset: item;
+}
+
+.listBene li {
+  counter-increment: item;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.3px;
+}
+
+.listBene li:before {
+  margin-right: 13px;
+  content: counters(item, ".") ". ";
+  display: inline-block;
+  color: #003097;
+}
+
 .listBenefits {
   padding: 120px 90px 88px 102px;
 }
@@ -39,11 +60,13 @@ header {
   line-height: 70px;
   letter-spacing: 0.35px;
   color: #003097;
+  margin-top: 0px;
+  margin-bottom: 52px;
 }
 
 .listBenefits .peopleWalking {
-  width: 606px;
-  height: 460px;
+  max-width: 606px;
+  max-height: 460px;
 }
 
 .listBenefits .benefits-div {
@@ -60,6 +83,79 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.listBenefits .listBene {
+  list-style: none;
+  counter-reset: item;
+}
+
+.listBenefits .listBene li {
+  counter-increment: item;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.3px;
+}
+
+.listBenefits .listBene li:before {
+  margin-right: 13px;
+  content: counters(item, ".") ". ";
+  display: inline-block;
+  color: #003097;
+}
+
+@media all and (max-width: 1200px) {
+  .listBenefits {
+    padding: 50px 30px 60px 35px;
+  }
+  .listBenefits .soPerky {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 48px;
+    letter-spacing: 0.1px;
+    color: #003097;
+    margin-top: 0px;
+    margin-bottom: 35px;
+  }
+  .listBenefits .peopleWalking {
+    max-width: 294px;
+    max-height: 225px;
+  }
+  .listBenefits .benefits-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .listBenefits .listBene {
+    list-style: none;
+    counter-reset: item;
+  }
+  .listBenefits .listBene li {
+    counter-increment: item;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .listBenefits .listBene li:before {
+    margin-right: 13px;
+    content: counters(item, ".") ". ";
+    display: inline-block;
+    color: #003097;
+  }
 }
 
 .testimonials {
@@ -134,7 +230,7 @@ header {
   color: #FFFFFF;
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 1200px) {
   .testimonials {
     padding: 51px 32px 62px 32px;
   }
@@ -198,5 +294,29 @@ header {
 
 .lastPic {
   background: #058C78;
+  padding: 80px 103px 80px 102px;
+}
+
+.lastPic .pictureTalking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lastPic .people-talking {
+  max-width: 1235px;
+  max-height: 660px;
+}
+
+@media all and (max-width: 360px) {
+  .lastPic {
+    padding: 45px 32px 45px 32px;
+  }
+  .lastPic .people-talking {
+    max-width: 296px;
+    max-height: 200px;
+    width: 296px;
+    height: 200px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

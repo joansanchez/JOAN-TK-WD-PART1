@@ -18,6 +18,8 @@
 body{
     font-family: CustomGraphik;
 }
+
+
 #main{
     background: $backgroundColor;
     max-width: 1440px;
@@ -40,6 +42,25 @@ header{
     height: 40px;
 }
 
+.listBene {
+    list-style: none;
+    counter-reset: item;
+    li {
+        counter-increment: item;
+        &:before {
+            margin-right: 13px;
+            content: counters(item, ".") ". ";
+            display: inline-block;
+            color: #003097;
+        }
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.3px;
+
+    }
+ }
 
 .listBenefits{
     padding: 120px 90px 88px 102px;
@@ -49,12 +70,13 @@ header{
         font-size: 54px;
         line-height: 70px;
         letter-spacing: 0.35px;
-
         color: #003097;
+        margin-top: 0px;
+        margin-bottom: 52px;
     }
     .peopleWalking{
-        width: 606px;
-        height: 460px;
+        max-width: 606px;
+        max-height: 460px;
         
     }
     .benefits-div{
@@ -63,8 +85,67 @@ header{
         align-items: center;
         justify-content: space-between;
     }
-    @media all and (max-width: 640px) {
-
+    .listBene {
+        list-style: none;
+        counter-reset: item;
+        li {
+            counter-increment: item;
+            &:before {
+                margin-right: 13px;
+                content: counters(item, ".") ". ";
+                display: inline-block;
+                color: #003097;
+            }
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: -0.3px;
+    
+        }
+     }
+    @media all and (max-width: 1200px) {
+        padding: 50px 30px 60px 35px;
+        .soPerky{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 38px;
+            line-height: 48px;
+            letter-spacing: 0.1px;
+            color: #003097;
+            margin-top: 0px;
+            margin-bottom: 35px;
+        }
+        .peopleWalking{
+            max-width: 294px;
+            max-height: 225px;
+            
+        }
+        .benefits-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .listBene {
+            list-style: none;
+            counter-reset: item;
+            li {
+                counter-increment: item;
+                &:before {
+                    margin-right: 13px;
+                    content: counters(item, ".") ". ";
+                    display: inline-block;
+                    color: #003097;
+                }
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 30px;
+                
+        
+            }
+         }
     }
 }
 
@@ -119,13 +200,14 @@ header{
         line-height: 26px;
         color: #FFFFFF;
     }
-    @media all and (max-width: 640px) {
+    @media all and (max-width: 1200px) {
         padding: 51px 32px 62px 32px;
         .testimonials-div{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            
         }
         
         .testimonials-her{  
@@ -180,7 +262,25 @@ header{
 
 .lastPic{
     @include setUpContainer($backgroundLastPic);
-   
+    padding: 80px 103px 80px 102px;
+   .pictureTalking{
+       display: flex;
+       
+   }
+    .people-talking{
+         max-width: 1235px;
+         max-height: 660px;
+   }
+   @media all and (max-width: 360px) {
+        padding: 45px 32px 45px 32px;
+    
+        .people-talking{
+            max-width: 296px;
+            max-height: 200px;
+            width: 296px;
+            height: 200px;
+        } 
+    }  
 }
 
 #footerIndex{
