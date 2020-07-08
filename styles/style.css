@@ -20,6 +20,11 @@ header {
   padding-top: 50px;
 }
 
+.logo {
+  width: 180.83px;
+  height: 40px;
+}
+
 .generalInfo {
   background: #003097;
   padding: 60px 102px 63px 100px;
@@ -35,10 +40,10 @@ header {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-height: 500px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-height: 500px;
   margin-bottom: 70px;
 }
 
@@ -72,7 +77,7 @@ header {
   max-width: 576px;
 }
 
-.generalInfo .peopleWalkingHeader {
+.generalInfo .picPeopleWalkingHeader {
   max-width: 576px;
   max-height: 440px;
 }
@@ -170,7 +175,7 @@ header {
             order: 4;
     max-width: 296px;
   }
-  .generalInfo .peopleWalkingHeader {
+  .generalInfo .picPeopleWalkingHeader {
     max-width: 294px;
     max-height: 225px;
   }
@@ -225,14 +230,9 @@ header {
   .generalInfo .customerElement {
     margin: 7px;
   }
-  .generalInfo .customerLogo {
+  .generalInfo .picCustomerLogo {
     max-width: 80px;
   }
-}
-
-.logo {
-  width: 180.83px;
-  height: 40px;
 }
 
 .listBene {
@@ -271,7 +271,7 @@ header {
   margin-bottom: 52px;
 }
 
-.listBenefits .peopleWalking {
+.listBenefits .picPeopleWalking {
   max-width: 606px;
   max-height: 460px;
 }
@@ -327,7 +327,7 @@ header {
     margin-top: 0px;
     margin-bottom: 35px;
   }
-  .listBenefits .peopleWalking {
+  .listBenefits .picPeopleWalking {
     max-width: 294px;
     max-height: 225px;
   }
@@ -370,7 +370,7 @@ header {
   padding: 103px 94px 117px 92px;
 }
 
-.testimonials .testimonials-div {
+.testimonials .testimonialsDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,12 +386,12 @@ header {
           justify-content: space-between;
 }
 
-.testimonials .testimonials-her {
+.testimonials .picTestimonialsHer {
   max-width: 526px;
   max-height: 526px;
 }
 
-.testimonials .testimonials-him {
+.testimonials .picTestimonialsHim {
   max-width: 517px;
   max-height: 517px;
 }
@@ -411,7 +411,7 @@ header {
           order: 2;
 }
 
-.testimonials .text-testimonials-big {
+.testimonials .textTestimonialsBig {
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -420,7 +420,7 @@ header {
   color: #FFFFFF;
 }
 
-.testimonials .text-name-testimonials {
+.testimonials .textNameTestimonials {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -429,7 +429,7 @@ header {
   color: #FFFFFF;
 }
 
-.testimonials .text-position-testimonials {
+.testimonials .textPositionTestimonials {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -441,7 +441,7 @@ header {
   .testimonials {
     padding: 51px 32px 62px 32px;
   }
-  .testimonials .testimonials-div {
+  .testimonials .testimonialsDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -456,11 +456,11 @@ header {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .testimonials .testimonials-her {
+  .testimonials .picTestimonialsHer {
     max-width: 296px;
     max-height: 296px;
   }
-  .testimonials .testimonials-him {
+  .testimonials .picTestimonialsHim {
     max-width: 296px;
     max-height: 296px;
   }
@@ -476,21 +476,21 @@ header {
         -ms-flex-order: 2;
             order: 2;
   }
-  .testimonials .text-testimonials-big {
+  .testimonials .textTestimonialsBig {
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
     line-height: 26px;
     color: #FFFFFF;
   }
-  .testimonials .text-name-testimonials {
+  .testimonials .textNameTestimonials {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 26px;
     color: #FFFFFF;
   }
-  .testimonials .text-position-testimonials {
+  .testimonials .textPositionTestimonials {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -516,7 +516,7 @@ header {
   padding: 12px;
 }
 
-.customers .first-item-mosaic {
+.customers .FirstItemMosaic {
   background: #003097;
   width: 398.07px;
   height: 184.11px;
@@ -533,7 +533,7 @@ header {
   color: #FFFFFF;
 }
 
-.customers .item-mosaic {
+.customers .itemMosaic {
   width: 186px;
   height: 83.19px;
   background: #FFFFFF;
@@ -559,14 +559,14 @@ header {
             flex-flow: row wrap;
     padding: 0px;
   }
-  .customers .first-item-mosaic {
+  .customers .FirstItemMosaic {
     background: #003097;
     width: 296px;
     height: 160px;
     margin: 0px;
     margin-bottom: 20px;
   }
-  .customers .item-mosaic {
+  .customers .itemMosaic {
     width: 140px;
     height: 60px;
     background: #FFFFFF;
@@ -575,28 +575,28 @@ header {
     margin: 0px;
     display: none;
   }
-  .customers .item-mosaic:nth-child(2) {
+  .customers .itemMosaic:nth-child(2) {
     display: unset;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     margin: 0px 5px 8px 0px;
   }
-  .customers .item-mosaic:nth-child(3) {
+  .customers .itemMosaic:nth-child(3) {
     display: unset;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin: 0px 0px 8px 5px;
   }
-  .customers .item-mosaic:nth-child(7) {
+  .customers .itemMosaic:nth-child(7) {
     display: unset;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
     margin: 0px 5px 0px 0px;
   }
-  .customers .item-mosaic:nth-child(8) {
+  .customers .itemMosaic:nth-child(8) {
     display: unset;
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
@@ -616,7 +616,7 @@ header {
   display: flex;
 }
 
-.lastPic .people-talking {
+.lastPic .picPeopleTalking {
   max-width: 1235px;
   max-height: 660px;
 }
@@ -625,12 +625,17 @@ header {
   .lastPic {
     padding: 45px 32px 45px 32px;
   }
-  .lastPic .people-talking {
+  .lastPic .picPeopleTalking {
     max-width: 296px;
     max-height: 200px;
     width: 296px;
     height: 200px;
   }
+}
+
+#jsSection {
+  background: #D39101;
+  padding: 90px 90px 88px 102px;
 }
 
 #footerIndex .footerIn {

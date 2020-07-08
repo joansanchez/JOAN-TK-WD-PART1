@@ -1,9 +1,25 @@
 @import './variables';
+@import './mobile';
 
 @mixin setUpContainer($backgroundCol) {
     background: $backgroundCol;
 }
 
+@mixin flexinColumn(){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin setFont($fontStyle, $fontWeight, $fontSize, $lineHeight, $letterSpacing, $color){
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
 
 @font-face {
     font-family: "CustomGraphik";
@@ -23,7 +39,7 @@ body{
 
 #main{
     background: $backgroundColor;
-    max-width: 1440px;
+    max-width: $maxWidth;
     margin: auto;
 }
 
@@ -33,49 +49,38 @@ header{
     padding-top: 50px;
 }
 
+.logo{
+    width: $logoWidth;
+    height: $logoHeight;
+}
+
 .generalInfo{
     @include setUpContainer($backgroundHeader);
     padding: 60px 102px 63px 100px;
     .mainInfo{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        @include flexinColumn();
         max-height: 500px;
-        justify-content: space-between;
         margin-bottom: 70px;
-        // align-items: flex-start;
     }
     .mainInfoElement:nth-child(1){
-        max-width: 608px;
-        //max-height: 160px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 64px;
-        line-height: 80px;
-        letter-spacing: 0.4px;
-        color: #FFFFFF;
+        max-width: $maxWidthColLeftHeader;
+        @include setFont(normal, 300, 64px, 80px, 0.4px, #FFFFFF);
         margin-top: -64px;
         
     }
     .mainInfoElement:nth-child(2){
-        max-width: 608px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.3px;
-        color: #FFFFFF;
+        max-width: $maxWidthColLeftHeader;
+        @include setFont(normal, normal, 24px, 36px, -0.3px, #FFFFFF)
         margin-top: -12px;
     }
     .mainInfoElement:nth-child(3){
-        max-width: 608px;
-        //max-height: 55px; 
+        max-width: $maxWidthColLeftHeader;
     }
     .mainInfoElement:nth-child(4){
-        max-width: 576px; 
+        max-width: $maxWidthColRightHeader; 
     }
-    .peopleWalkingHeader{
-        max-width: 576px;
+    .picPeopleWalkingHeader{
+        max-width: $maxWidthColRightHeader;
         max-height: 440px;   
     }
     .button1{
@@ -158,7 +163,7 @@ header{
             max-width: 296px;
             //max-height: 55px; 
         }
-        .peopleWalkingHeader{
+        .picPeopleWalkingHeader{
             max-width: 294px;
             max-height: 225px;   
         }
@@ -204,7 +209,7 @@ header{
         .customerElement{
             margin: 7px;
         }
-        .customerLogo{
+        .picCustomerLogo{
             max-width: 80px;
         }
         
@@ -212,10 +217,7 @@ header{
     
 }
 
-.logo{
-    width: 180.83px;
-    height: 40px;
-}
+
 
 .listBene {
     list-style: none;
@@ -249,7 +251,7 @@ header{
         margin-top: 0px;
         margin-bottom: 52px;
     }
-    .peopleWalking{
+    .picPeopleWalking{
         max-width: 606px;
         max-height: 460px;
         
@@ -291,7 +293,7 @@ header{
             margin-top: 0px;
             margin-bottom: 35px;
         }
-        .peopleWalking{
+        .picPeopleWalking{
             max-width: 294px;
             max-height: 225px;
             
@@ -327,19 +329,19 @@ header{
 .testimonials{
     @include setUpContainer($backgroundTestimonials);
     padding: 103px 94px 117px 92px;
-    .testimonials-div{
+    .testimonialsDiv{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
     
-    .testimonials-her{  
+    .picTestimonialsHer{  
         max-width: 526px;
         max-height: 526px;
     }
     
-    .testimonials-him{  
+    .picTestimonialsHim{  
         max-width: 517px;
         max-height: 517px;
     }
@@ -352,7 +354,7 @@ header{
         max-width: 517px;
         order: 2;
     }
-    .text-testimonials-big{
+    .textTestimonialsBig{
         font-weight: normal;
         font-style: normal;
         font-size: 24px;
@@ -360,7 +362,7 @@ header{
         letter-spacing: -0.3px;
         color: #FFFFFF;
     }
-    .text-name-testimonials{
+    .textNameTestimonials{
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -368,7 +370,7 @@ header{
         letter-spacing: 0.1px;
         color: #FFFFFF;
     }
-    .text-position-testimonials{
+    .textPositionTestimonials{
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -377,7 +379,7 @@ header{
     }
     @media all and (max-width: 700px) {
         padding: 51px 32px 62px 32px;
-        .testimonials-div{
+        .testimonialsDiv{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -385,12 +387,12 @@ header{
             
         }
         
-        .testimonials-her{  
+        .picTestimonialsHer{  
             max-width: 296px;
             max-height: 296px;
         }
         
-        .testimonials-him{  
+        .picTestimonialsHim{  
             max-width: 296px;
             max-height: 296px;
         }
@@ -403,21 +405,21 @@ header{
             max-width: 517px;
             order: 2;
         }
-        .text-testimonials-big{
+        .textTestimonialsBig{
             font-weight: normal;
             font-style: normal;
             font-size: 16px;
             line-height: 26px;
             color: #FFFFFF;
         }
-        .text-name-testimonials{
+        .textNameTestimonials{
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
             line-height: 26px;
             color: #FFFFFF;
         }
-        .text-position-testimonials{
+        .textPositionTestimonials{
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
@@ -439,7 +441,7 @@ header{
         flex-flow: wrap;
         padding:12px;
     }
-    .first-item-mosaic{
+    .FirstItemMosaic{
         background: #003097;
         width: 398.07px;
         height: 184.11px;
@@ -457,7 +459,7 @@ header{
 
         color: #FFFFFF;
     }
-    .item-mosaic{
+    .itemMosaic{
         width: 186px;
         height: 83.19px;
         background: #FFFFFF;
@@ -481,7 +483,7 @@ header{
             flex-flow: row wrap;
             padding:0px;
         }
-        .first-item-mosaic{
+        .FirstItemMosaic{
             background: #003097;
             width: 296px;
             height: 160px;
@@ -489,7 +491,7 @@ header{
             margin-bottom:20px;
         }
     
-        .item-mosaic{
+        .itemMosaic{
             width: 140px;
             height: 60px;
             background: #FFFFFF;
@@ -498,22 +500,22 @@ header{
             margin:0px;
             display: none;
          }
-         .item-mosaic:nth-child(2){
+         .itemMosaic:nth-child(2){
              display: unset;
              order:1;
              margin: 0px 5px 8px 0px;
          }
-         .item-mosaic:nth-child(3){
+         .itemMosaic:nth-child(3){
             display: unset;
             order:2;
             margin: 0px 0px 8px 5px;
         }
-        .item-mosaic:nth-child(7){
+        .itemMosaic:nth-child(7){
             display: unset;
             order:3;
             margin: 0px 5px 0px 0px;
         }
-        .item-mosaic:nth-child(8){
+        .itemMosaic:nth-child(8){
             display: unset;
             order:4;
             margin: 0px 0px 0px 5px;
@@ -528,20 +530,24 @@ header{
        display: flex;
        
    }
-    .people-talking{
+    .picPeopleTalking{
          max-width: 1235px;
          max-height: 660px;
    }
    @media all and (max-width: 360px) {
         padding: 45px 32px 45px 32px;
     
-        .people-talking{
+        .picPeopleTalking{
             max-width: 296px;
             max-height: 200px;
             width: 296px;
             height: 200px;
         } 
     }  
+}
+#jsSection{
+    @include setUpContainer($backgroundTestimonials);
+    padding: 90px 90px 88px 102px;
 }
 
 #footerIndex{
