@@ -535,6 +535,12 @@ header {
   text-align: center;
 }
 
+.customers .img-centered {
+  background: black;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+
 @media all and (max-width: 1200px) {
   .customers {
     padding: 50px 31px 60px 33px;

@@ -363,7 +363,8 @@ header{
     }
     
     .img-centered{
-        //padding-top: 12px;
+        background: black;
+        mask-size: cover;
     }
 
     @media all and (max-width: $mobileResolution){
