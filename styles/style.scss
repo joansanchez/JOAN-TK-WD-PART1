@@ -42,6 +42,7 @@ header{
         flex-wrap: wrap;
         max-height: 500px;
         justify-content: space-between;
+        margin-bottom: 70px;
         // align-items: flex-start;
     }
     .mainInfoElement:nth-child(1){
@@ -105,6 +106,22 @@ header{
         letter-spacing: 0.0888889px;
 
         color: #003097;
+    }
+    .customersHeader{
+        display: flex;
+        flex-flow: row wrap;  
+        justify-content: space-between;
+    }
+    .simpleFont{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 15px;
+
+        color: #FFFFFF;
+
+        mix-blend-mode: normal;
+        opacity: 0.9;
     }
 
     @media all and (max-width: 1200px) {
@@ -177,6 +194,18 @@ header{
             letter-spacing: 0.0888889px;
     
             color: #003097;
+        }
+        .customersHeader{
+            display: flex;
+            flex-flow: row wrap;  
+            justify-content: center;
+            padding: 7px;
+        }
+        .customerElement{
+            margin: 7px;
+        }
+        .customerLogo{
+            max-width: 80px;
         }
         
     }
@@ -406,6 +435,7 @@ header{
     padding: 108px 92px 108px 94px;
     .mosaic{
         display: flex;
+        flex-direction: row;
         flex-flow: wrap;
         padding:12px;
     }
@@ -414,6 +444,18 @@ header{
         width: 398.07px;
         height: 184.11px;
         margin:12px;
+        
+        
+    }
+    .join{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 30px;
+        /* or 136% */
+        letter-spacing: -0.1px;
+
+        color: #FFFFFF;
     }
     .item-mosaic{
         width: 186px;
