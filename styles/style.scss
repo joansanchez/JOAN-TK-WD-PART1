@@ -12,6 +12,12 @@
     justify-content: space-between;
 }
 
+@mixin flexinRow(){
+    display: flex;
+    flex-flow: row wrap;  
+    justify-content: space-between;
+}
+
 @mixin setFont($fontStyle, $fontWeight, $fontSize, $lineHeight, $letterSpacing, $color){
     font-style: $fontStyle;
     font-weight: $fontWeight;
@@ -54,6 +60,10 @@ header{
     height: $logoHeight;
 }
 
+.marginRight{
+    margin-right: 15px;
+}
+
 .generalInfo{
     @include setUpContainer($backgroundHeader);
     padding: 60px 102px 63px 100px;
@@ -70,7 +80,7 @@ header{
     }
     .mainInfoElement:nth-child(2){
         max-width: $maxWidthColLeftHeader;
-        @include setFont(normal, normal, 24px, 36px, -0.3px, #FFFFFF)
+        @include setFont(normal, normal, 24px, 36px, -0.3px, #FFFFFF);
         margin-top: -12px;
     }
     .mainInfoElement:nth-child(3){
@@ -88,14 +98,9 @@ header{
         width: 198px;
         height: 52px;
         border-radius: 4px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 18px;
+        @include setFont(normal, normal, 16px, 18px, 0.0888889px, #FFFFFF);
         text-align: center;
-        letter-spacing: 0.0888889px;
         margin-right: 23px;
-        color: #FFFFFF;
     }
     .button2{
         width: 198px;
@@ -103,65 +108,40 @@ header{
         background: #FFFFFF;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 18px;
+        @include setFont(normal, normal, 16px, 18px, 0.0888889px, #003097);
         text-align: center;
-        letter-spacing: 0.0888889px;
-
-        color: #003097;
     }
     .customersHeader{
-        display: flex;
-        flex-flow: row wrap;  
-        justify-content: space-between;
+        @include flexinRow()
     }
     .simpleFont{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 15px;
-
-        color: #FFFFFF;
-
+        @include setFont(normal, normal, 14px, 15px, auto, #FFFFFF);
         mix-blend-mode: normal;
         opacity: 0.9;
     }
 
-    @media all and (max-width: 1200px) {
+    @media all and (max-width: $mobileResolution) {
         padding: 35px 30px 30px 35px;
         .mainInfo{
             max-height: 1150px;
         }
         .mainInfoElement:nth-child(1){
             order: 0;
-            max-width: 296px;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 44px;
-            line-height: 52px;
-            letter-spacing: 0.115789px;
-            color: #FFFFFF;
+            max-width: $maxWidthElementsMobile;
+            @include setFont(normal, 300, 44px, 52px, 0.115789px, #FFFFFF);
             margin-top: -44px;
         }
 
         .mainInfoElement:nth-child(2){
             order: 4;
-            max-width: 296px;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: -0.1px;
-
-            color: #FFFFFF;
+            max-width: $maxWidthElementsMobile;
+            @include setFont(normal, normal, 20px, 30px, -0.1px, #FFFFFF);
             margin-top: -12px;
         }
         .mainInfoElement:nth-child(3){
             order: 4;
-            max-width: 296px;
-            //max-height: 55px; 
+            max-width: $maxWidthElementsMobile;
+             
         }
         .picPeopleWalkingHeader{
             max-width: 294px;
@@ -173,32 +153,21 @@ header{
         }
         .button1{
             background: #DC3367;
-            width: 296px;
+            width: $maxWidthElementsMobile;
             height: 52px;
             border-radius: 4px;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 18px;
+            @include setFont(normal, normal, 16px, 18px, 0.0888889px, #FFFFFF);
             text-align: center;
-            letter-spacing: 0.0888889px;
             margin-bottom: 15px;
-            color: #FFFFFF;
         }
         .button2{
-            width: 296px;
+            width: $maxWidthElementsMobile;
             height: 52px;
             background: #FFFFFF;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
             border-radius: 4px;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 18px;
+            @include setFont(normal, normal, 16px, 18px, 0.0888889px, #003097);
             text-align: center;
-            letter-spacing: 0.0888889px;
-    
-            color: #003097;
         }
         .customersHeader{
             display: flex;
@@ -217,37 +186,10 @@ header{
     
 }
 
-
-
-.listBene {
-    list-style: none;
-    counter-reset: item;
-    li {
-        counter-increment: item;
-        &:before {
-            margin-right: 13px;
-            content: counters(item, ".") ". ";
-            display: inline-block;
-            color: #003097;
-        }
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.3px;
-
-    }
- }
-
 .listBenefits{
     padding: 120px 90px 88px 102px;
     .soPerky{
-        font-style: normal;
-        font-weight: 300;
-        font-size: 54px;
-        line-height: 70px;
-        letter-spacing: 0.35px;
-        color: #003097;
+        @include setFont(normal, 300, 54px, 70px, 0.35px, #003097);
         margin-top: 0px;
         margin-bottom: 52px;
     }
@@ -273,23 +215,13 @@ header{
                 display: inline-block;
                 color: #003097;
             }
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 36px;
-            letter-spacing: -0.3px;
-    
+            @include setFont(normal, normal, 24px, 36px, -0.3px, #000000);
         }
      }
-    @media all and (max-width: 1200px) {
+    @media all and (max-width: $mobileResolution) {
         padding: 50px 30px 60px 35px;
         .soPerky{
-            font-style: normal;
-            font-weight: 300;
-            font-size: 38px;
-            line-height: 48px;
-            letter-spacing: 0.1px;
-            color: #003097;
+            @include setFont(normal, 300, 38px, 48px, 0.1px, #003097);
             margin-top: 0px;
             margin-bottom: 35px;
         }
@@ -315,12 +247,7 @@ header{
                     display: inline-block;
                     color: #003097;
                 }
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 30px;
-                
-        
+                @include setFont(normal, normal, 16px, 30px, auto, #000000);               
             }
          }
     }
@@ -337,47 +264,33 @@ header{
     }
     
     .picTestimonialsHer{  
-        max-width: 526px;
-        max-height: 526px;
+        max-width: $maxWidthTestimonialsHer;
+        max-height: $maxWidthTestimonialsHer;
     }
     
     .picTestimonialsHim{  
-        max-width: 517px;
-        max-height: 517px;
+        max-width: $maxWidthTestimonialsHim;
+        max-height: $maxWidthTestimonialsHim;
     }
     .leftCol{
-        max-width: 526px;
+        max-width: $maxWidthTestimonialsHer;
         order: 1;
     }
     .rightCol{
         margin-top: 15px;
-        max-width: 517px;
+        max-width: $maxWidthTestimonialsHim;
         order: 2;
     }
     .textTestimonialsBig{
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.3px;
-        color: #FFFFFF;
+        @include setFont(normal, normal, 24px, 36px, -0.3px, #FFFFFF);
     }
     .textNameTestimonials{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 18px;
-        letter-spacing: 0.1px;
-        color: #FFFFFF;
+        @include setFont(normal, 500, 16px, 18px, 0.1px, #FFFFFF);
     }
     .textPositionTestimonials{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 26px;
-        color: #FFFFFF;
+        @include setFont(normal, normal, 16px, 26px, auto, #FFFFFF);
     }
-    @media all and (max-width: 700px) {
+    @media all and (max-width: $mobileResolution) {
         padding: 51px 32px 62px 32px;
         .testimonialsDiv{
             display: flex;
@@ -388,50 +301,34 @@ header{
         }
         
         .picTestimonialsHer{  
-            max-width: 296px;
-            max-height: 296px;
+            max-width: $maxWidthElementsMobile;
+            max-height: $maxWidthElementsMobile;
         }
         
         .picTestimonialsHim{  
-            max-width: 296px;
-            max-height: 296px;
+            max-width: $maxWidthElementsMobile;
+            max-height: $maxWidthElementsMobile;
         }
     
         .leftCol{
-            max-width: 526px;
+            max-width: $maxWidthElementsMobile;
             order: 1;
         }
         .rightCol{
-            max-width: 517px;
+            max-width: $maxWidthElementsMobile;
             order: 2;
         }
         .textTestimonialsBig{
-            font-weight: normal;
-            font-style: normal;
-            font-size: 16px;
-            line-height: 26px;
-            color: #FFFFFF;
+            @include setFont(normal, normal, 16px, 26px, auto, #FFFFFF);
         }
         .textNameTestimonials{
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 26px;
-            color: #FFFFFF;
+            @include setFont(normal, 600, 16px, 26px, auto, #FFFFFF);
         }
         .textPositionTestimonials{
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 26px;
-            color: #FFFFFF;
+            @include setFont(normal, normal, 16px, 26px, auto, #FFFFFF);
         }
     }
 }
-
-
-
-
 
 .customers{
     padding: 108px 92px 108px 94px;
@@ -449,15 +346,8 @@ header{
         
         
     }
-    .join{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 22px;
-        line-height: 30px;
-        /* or 136% */
-        letter-spacing: -0.1px;
-
-        color: #FFFFFF;
+    .joinText{
+        @include setFont(normal, normal, 22px, 30px, -0.1px, #FFFFFF);
     }
     .itemMosaic{
         width: 186px;
@@ -476,7 +366,7 @@ header{
         //padding-top: 12px;
     }
 
-    @media all and (max-width: 560px){
+    @media all and (max-width: $mobileResolution){
         padding: 50px 31px 60px 33px;
         .mosaic{
             display: flex;
@@ -485,7 +375,7 @@ header{
         }
         .FirstItemMosaic{
             background: #003097;
-            width: 296px;
+            width: $maxWidthElementsMobile;
             height: 160px;
             margin: 0px;
             margin-bottom:20px;
@@ -528,19 +418,18 @@ header{
     padding: 80px 103px 80px 102px;
    .pictureTalking{
        display: flex;
-       
    }
     .picPeopleTalking{
          max-width: 1235px;
          max-height: 660px;
    }
-   @media all and (max-width: 360px) {
+   @media all and (max-width: $mobileResolution) {
         padding: 45px 32px 45px 32px;
     
         .picPeopleTalking{
-            max-width: 296px;
+            max-width: $maxWidthElementsMobile;
             max-height: 200px;
-            width: 296px;
+            width: $maxWidthElementsMobile;
             height: 200px;
         } 
     }  
@@ -552,10 +441,8 @@ header{
 
 #footerIndex{
     .footerIn{
-        display: flex;
-        flex-flow: row wrap;
+        @include flexinRow();
         padding: 46px 18px 38px 82px;
-        justify-content: space-between;
     }
     .leftColFoot{
         display: flex;
@@ -567,40 +454,22 @@ header{
     }
     .copyright{
         padding: 0px 0px 0px 20px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 20px;
-        letter-spacing: 0.3px;
-        color: #000000;
+        @include setFont(normal, normal, 13px, 20px, 0.3px, #000000);
     }
     .all-rights{
         padding: 0px 0px 0px 5px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 20px;
-        letter-spacing: 0.3px;
-        color: #000000;
+        @include setFont(normal, normal, 13px, 20px, 0.3px, #000000);
     }
     .links{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 20px;
-        letter-spacing: 0.3px;
-        color: #003097;
+        @include flexinRow();
+        @include setFont(normal, normal, 13px, 20px, 0.3px, #003097);
     }
 
-    @media all and (max-width: 660px) {
+    @media all and (max-width: $mobileResolution) {
         .footerIn{
             display: flex;
             flex-flow: column wrap;
             padding: 30px 32px 28px 32px;
-            //justify-content: space-between;
         }
         .links{
             order: 0;
@@ -624,6 +493,4 @@ header{
 }
 
 
-.marginRight{
-    margin-right: 15px;
-}
+
