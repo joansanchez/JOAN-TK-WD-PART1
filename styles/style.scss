@@ -17,6 +17,7 @@
 
 body{
     font-family: CustomGraphik;
+    margin: 0px;
 }
 
 
@@ -257,7 +258,50 @@ header{
 
 
 .customers{
+    padding: 108px 92px 108px 94px;
+    .mosaic{
+        display: flex;
+        flex-flow: wrap;
+        padding:12px;
+    }
+    .first-item-mosaic{
+        background: #003097;
+        width: 398.07px;
+        height: 184.11px;
+        margin:12px;
+    }
+    .item-mosaic{
+        width: 186px;
+        height: 83.19px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        margin:12px;
+    }
+    @media all and (max-width: 360px){
+        padding: 50px 31px 60px 33px;
+        .mosaic{
+            display: flex;
+            flex-flow: row wrap;
+            padding:0px;
+        }
+        .first-item-mosaic{
+            background: #003097;
+            width: 296px;
+            height: 160px;
+            margin: 0px;
+            margin-bottom:20px;
+        }
     
+        .item-mosaic{
+            width: 140px;
+            height: 60px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+            margin:0px;
+         }
+}
 }
 
 .lastPic{

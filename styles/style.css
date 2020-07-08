@@ -5,6 +5,7 @@
 
 body {
   font-family: CustomGraphik;
+  margin: 0px;
 }
 
 #main {
@@ -289,6 +290,66 @@ header {
     font-size: 16px;
     line-height: 26px;
     color: #FFFFFF;
+  }
+}
+
+.customers {
+  padding: 108px 92px 108px 94px;
+}
+
+.customers .mosaic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  padding: 12px;
+}
+
+.customers .first-item-mosaic {
+  background: #003097;
+  width: 398.07px;
+  height: 184.11px;
+  margin: 12px;
+}
+
+.customers .item-mosaic {
+  width: 186px;
+  height: 83.19px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin: 12px;
+}
+
+@media all and (max-width: 360px) {
+  .customers {
+    padding: 50px 31px 60px 33px;
+  }
+  .customers .mosaic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 0px;
+  }
+  .customers .first-item-mosaic {
+    background: #003097;
+    width: 296px;
+    height: 160px;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  .customers .item-mosaic {
+    width: 140px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin: 0px;
   }
 }
 
