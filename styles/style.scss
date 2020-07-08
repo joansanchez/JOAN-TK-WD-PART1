@@ -35,6 +35,151 @@ header{
 
 .generalInfo{
     @include setUpContainer($backgroundHeader);
+    padding: 60px 102px 63px 100px;
+    .mainInfo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 500px;
+        justify-content: space-between;
+        // align-items: flex-start;
+    }
+    .mainInfoElement:nth-child(1){
+        max-width: 608px;
+        //max-height: 160px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 80px;
+        letter-spacing: 0.4px;
+        color: #FFFFFF;
+        margin-top: -64px;
+        
+    }
+    .mainInfoElement:nth-child(2){
+        max-width: 608px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.3px;
+        color: #FFFFFF;
+        margin-top: -12px;
+    }
+    .mainInfoElement:nth-child(3){
+        max-width: 608px;
+        //max-height: 55px; 
+    }
+    .mainInfoElement:nth-child(4){
+        max-width: 576px; 
+    }
+    .peopleWalkingHeader{
+        max-width: 576px;
+        max-height: 440px;   
+    }
+    .button1{
+        background: #DC3367;
+        width: 198px;
+        height: 52px;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.0888889px;
+        margin-right: 23px;
+        color: #FFFFFF;
+    }
+    .button2{
+        width: 198px;
+        height: 52px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.0888889px;
+
+        color: #003097;
+    }
+
+    @media all and (max-width: 1200px) {
+        padding: 35px 30px 30px 35px;
+        .mainInfo{
+            max-height: 1150px;
+        }
+        .mainInfoElement:nth-child(1){
+            order: 0;
+            max-width: 296px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 44px;
+            line-height: 52px;
+            letter-spacing: 0.115789px;
+            color: #FFFFFF;
+            margin-top: -44px;
+        }
+
+        .mainInfoElement:nth-child(2){
+            order: 4;
+            max-width: 296px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: -0.1px;
+
+            color: #FFFFFF;
+            margin-top: -12px;
+        }
+        .mainInfoElement:nth-child(3){
+            order: 4;
+            max-width: 296px;
+            //max-height: 55px; 
+        }
+        .peopleWalkingHeader{
+            max-width: 294px;
+            max-height: 225px;   
+        }
+        .mainInfoElement:nth-child(4){
+            order: 1;
+            max-width: 294px; 
+        }
+        .button1{
+            background: #DC3367;
+            width: 296px;
+            height: 52px;
+            border-radius: 4px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 0.0888889px;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+        .button2{
+            width: 296px;
+            height: 52px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 0.0888889px;
+    
+            color: #003097;
+        }
+        
+    }
     
 }
 
@@ -201,7 +346,7 @@ header{
         line-height: 26px;
         color: #FFFFFF;
     }
-    @media all and (max-width: 1200px) {
+    @media all and (max-width: 700px) {
         padding: 51px 32px 62px 32px;
         .testimonials-div{
             display: flex;
@@ -277,8 +422,17 @@ header{
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 2px;
         margin:12px;
+        mix-blend-mode: normal;
+        opacity: 0.4;
+        text-align: center;
+                
     }
-    @media all and (max-width: 360px){
+    
+    .img-centered{
+        //padding-top: 12px;
+    }
+
+    @media all and (max-width: 560px){
         padding: 50px 31px 60px 33px;
         .mosaic{
             display: flex;
@@ -300,7 +454,28 @@ header{
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 2px;
             margin:0px;
+            display: none;
          }
+         .item-mosaic:nth-child(2){
+             display: unset;
+             order:1;
+             margin: 0px 5px 8px 0px;
+         }
+         .item-mosaic:nth-child(3){
+            display: unset;
+            order:2;
+            margin: 0px 0px 8px 5px;
+        }
+        .item-mosaic:nth-child(7){
+            display: unset;
+            order:3;
+            margin: 0px 5px 0px 0px;
+        }
+        .item-mosaic:nth-child(8){
+            display: unset;
+            order:4;
+            margin: 0px 0px 0px 5px;
+        }
 }
 }
 
@@ -328,5 +503,79 @@ header{
 }
 
 #footerIndex{
-    
+    .footerIn{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 46px 18px 38px 82px;
+        justify-content: space-between;
+    }
+    .leftColFoot{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .smallLogo{
+        text-align: center;
+        padding: 5px 0px 0px 0px;
+    }
+    .copyright{
+        padding: 0px 0px 0px 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        color: #000000;
+    }
+    .all-rights{
+        padding: 0px 0px 0px 5px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        color: #000000;
+    }
+    .links{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        color: #003097;
+    }
+
+    @media all and (max-width: 660px) {
+        .footerIn{
+            display: flex;
+            flex-flow: column wrap;
+            padding: 30px 32px 28px 32px;
+            //justify-content: space-between;
+        }
+        .links{
+            order: 0;
+        }
+        .leftColFoot{
+            order: 1;
+            flex-flow: column wrap;
+        }
+        .all-rights{
+            display: none;
+        }
+        .smallLogo{
+            order: 3;
+            text-align: left;
+            padding: 5px 0px 0px 0px;
+        }
+        .copyright{
+            padding: 0px 0px 0px 0px;
+        }
+    }
+}
+
+
+.marginRight{
+    margin-right: 15px;
 }
